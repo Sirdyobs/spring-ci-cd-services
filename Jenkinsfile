@@ -1,22 +1,11 @@
 pipeline {
-	agent {
-		docker {
-			image 'maven:3.6.1'
-			args '-v $HOME/.m2:/root/.m2:z -u root'
-			reuseNode true
-		}
-	}
+	agent any
 	
 	stages {
 		stage('Maven Install'){
-			agent {
-				
-			
-			}
-			
-		steps {
-			sh 'mvn clean install'
-		}	
+			steps {
+				sh 'mvn clean install'
+			}	
 		
 	}
 	
