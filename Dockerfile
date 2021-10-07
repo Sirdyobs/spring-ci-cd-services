@@ -1,4 +1,4 @@
 FROM openjdk:11.0.11
 RUN useradd -m -u 1000 -s /bin/bash jenkins
-COPY target/spring-ci-cd-services-0.0.1-SNAPSHOT.jar /opt/demo-0.0.1/lib/spring-ci-cd-services-0.0.1-SNAPSHOT.jar
+COPY target/spring-ci-cd-services.jar .
 ENTRYPOINT ["java","-jar","/spring-ci-cd-services.jar"]
