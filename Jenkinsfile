@@ -11,12 +11,9 @@ pipeline {
 		
 	}
 	
-	stage('Docker Build'){
-		agent any
-		
+	stage('Docker Build'){		
 		steps {
-		
-			sh 'docker build -t sirdyobs/spring-ci-cd-services:latest .'
+			sh 'docker build -t sirdyobs/spring-ci-cd-services:latest'
 			sh 'docker run -p 2222:8082 sirdyobs/spring-ci-cd-services'
 		
 		}	
