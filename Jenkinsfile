@@ -1,5 +1,10 @@
 pipeline {
 	agent any
+	
+	triggers {
+		pollSCM '* * * * *'
+	
+	}
 	tools {
 		maven "3.6.0"
 	}
